@@ -1,0 +1,18 @@
+# Java
+*.class
+
+# Intellij
+out/
+.idea/
+.idea_sauv/
+*.iml
+*.iws
+*.ipr
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
