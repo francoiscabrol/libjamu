@@ -17,6 +17,11 @@ define "libjamu" do
   # Select Java compiler version to 7
   compile.using :target=>'1.7'
   compile.options.lint = 'all' 
+
+  # Generate a jar file
   package(:jar)
+
+  # Generate the javadoc
+  package :javadoc
 
 end
