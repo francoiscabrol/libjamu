@@ -9,6 +9,9 @@ out/
 *.iws
 *.ipr
 
+# Buildr
+reports/
+
 # Mac
 .DS_Store
 
