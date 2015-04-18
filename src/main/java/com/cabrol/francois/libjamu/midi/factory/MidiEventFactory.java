@@ -36,7 +36,7 @@ public class MidiEventFactory {
     public static List<MidiNoteEvent> getMidiNoteEvents(Note note){
 
         ArrayList<MidiNoteEvent> midiNoteEvents = new ArrayList<MidiNoteEvent>();
-        midiNoteEvents.add(new MidiNoteEvent(ShortMessage.NOTE_ON, note.getRhythmicNote().getVelocity(), TickUtils.convertTockToTick(note.getRhythmicNote().getDuration()), note.getKey().getMidiKey()));
+        midiNoteEvents.add(new MidiNoteEvent(ShortMessage.NOTE_ON, note.getRhythmicNote().getVelocity(), TickUtils.convertTockToTick(note.getRhythmicNote().getStart()), note.getKey().getMidiKey()));
         midiNoteEvents.add(new MidiNoteEvent(ShortMessage.NOTE_OFF, note.getRhythmicNote().getVelocity(), TickUtils.convertTockToTick(note.getRhythmicNote().getStart())+TickUtils.convertTockToTick(note.getRhythmicNote().getDuration()), note.getKey().getMidiKey()));
         return midiNoteEvents;
     }
